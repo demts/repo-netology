@@ -4,9 +4,7 @@
 }
 
 body {
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto !important;
+  
 }
 
 /* ---------------- Верхний блок ---------------- */
@@ -33,16 +31,17 @@ header {
   fill: white;
   width: 190px;
   height: 50px;
-  margin-top: 45px;
+  margin-top: 3%;
 }
 
 .caption {  
+  margin-top: 15%;
   display: flex;
-  flex-wrap: wrap;  
+  flex-direction: column; 
   align-items: center;  
 }
 
-h1, h2 {
+h1 {
   font-size: 90px; 
   font-family: 'OpenSans', sans-serif;
   font-weight: 700;  
@@ -51,18 +50,11 @@ h1, h2 {
   text-transform: uppercase;
 }
 
-/*h1 {
-  padding-left: 190px;
-}
-
-h2 {
-  padding-left: 645px;
-}*/
-
 .apps {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 10%;
 }
 
 .app_button {
@@ -98,32 +90,82 @@ h2 {
 
 .section2 {
   height: 1760px;
-
 }
 
-.blue_player {
-  background-image: url(../images/footballer_566.png);
+.athlets, .players {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
-.red_player {
-  background: #f6d654 url(../images/basketballer_991.png) no-repeat;
-  background-size: cover;
+.athlet_txt, .player_txt {
+  flex-basis: 25%; 
+  align-content: flex-end;
+}
+
+.athlet_3 {
+  background-color: #f6f4fa;
+}
+
+.athlet_4 {
+  background-color: #5e42b0;
+}
+
+.player_3 {
+  background-color: #ffffff;
+}
+
+.player_4 {
+  background-color: #0a0e34;
+}
+
+h2 {
+  font-size: 80px; 
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 700;  
+  letter-spacing: 5px;
+  color: #c1c1c1;  
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 36px; 
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 700;  
+  letter-spacing: 5px;
+  color: #c1c1c1;  
+  text-transform: uppercase;
+}
+
+.athlet_txt:last-child > p, .player_txt:last-child > p {
+  color: white;  
 }
 
 /* ---------------- Шаги ---------------- */
 
-.section3 {
-      
+.step {  
+  display: flex;  
 }
 
-.step {
-  display: flex;
-  flex-wrap: wrap;   
+.step_img, .step_txt {  
+  flex-wrap: wrap;
+  flex-basis: 50%;
 }
 
-.step_img, .step_txt {
-  flex-basis: 25%;  
+.step_txt {
+  display: flex; 
+  align-items: center;  
 }
+
+.step_txt > p {
+  font-size: 24px; 
+  font-family: 'OpenSans', sans-serif;     
+}
+
+.step_img > img {
+  max-width: 100%;  
+} 
+
 
 
 /* ---------------- Подвал ---------------- */
@@ -137,12 +179,13 @@ h2 {
 
 footer {
   height: 100%;
-  background-color: rgb(10, 14, 52, 0.9);   
+  background-color: rgb(10, 14, 52, 0.9);
 }
 
 .down_app {
   display: flex;
-  flex-wrap: wrap;   
+  justify-content: center;
+  padding-top: 15%;
 }
 
 .down_app_icon {
@@ -152,14 +195,15 @@ footer {
   height: 140px; 
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center; 
+  margin-right: 10px; 
 }
 
 .down_app_txt > p {
   font-family: 'OpenSans', sans-serif;
   font-size: 30px;
   color: #a496ca;
-  text-transform: uppercase;
+  text-transform: uppercase;  
 }
 
 .logo_icon_mini { 
