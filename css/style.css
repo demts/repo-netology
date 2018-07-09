@@ -9,15 +9,14 @@ body {
 
 /* ---------------- Верхний блок ---------------- */
 
-.section1 {
+header {
   height: 960px;  
   background-image: url(../images/football_1920.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 
-header {  
+.header {  
   height: 100%;
   background-color: rgb(10, 14, 52, 0.9);  
 }
@@ -38,10 +37,10 @@ header {
   margin-top: 15%;
   display: flex;
   flex-direction: column; 
-  align-items: center;  
+  align-items: flex-start;  
 }
 
-h1 {
+.caption_txt {
   font-size: 90px; 
   font-family: 'OpenSans', sans-serif;
   font-weight: 700;  
@@ -49,6 +48,15 @@ h1 {
   color: white;  
   text-transform: uppercase;
 }
+
+.caption > span:first-child {  
+  margin-left: 8%;
+}
+
+.caption > span:last-child {  
+  margin-left: 32%;
+}
+
 
 .apps {
   display: flex;
@@ -68,7 +76,7 @@ h1 {
   align-items: center;  
 }
 
-.app_button > p {
+.app_button > span {
   font-family: 'OpenSans', sans-serif;
   font-size: 14px; 
   color: white;
@@ -88,19 +96,30 @@ h1 {
 
 /* ---------------- Игроки ---------------- */
 
-.section2 {
+.gamers {
   height: 1760px;
-}
-
-.athlets, .players {
-  height: 50%;
   display: flex;
   flex-direction: column;
 }
 
+.athlets, .players {
+  flex-basis: 50%;  
+
+}
+
+.athlet_txt {
+  padding-left: 50%;
+}
+
+.player_txt {
+  padding-left: 10%;
+}
+
 .athlet_txt, .player_txt {
-  flex-basis: 25%; 
-  align-content: flex-end;
+  height: 25%;    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .athlet_3 {
@@ -145,6 +164,7 @@ h3 {
 
 .step {  
   display: flex;  
+  font-size: 0; /* убирает пробелы между блоками */
 }
 
 .step_img, .step_txt {  
@@ -154,8 +174,20 @@ h3 {
 
 .step_txt {
   display: flex; 
-  align-items: center;  
+  flex-direction: column;
+  justify-content: center;
 }
+
+.step_txt:nth-child(even) {
+  padding-left: 8%;
+  box-sizing: border-box;
+}
+
+.step_txt:nth-child(odd) {
+  padding-left: 8%;
+  box-sizing: border-box;
+}
+
 
 .step_txt > p {
   font-size: 24px; 
@@ -170,14 +202,14 @@ h3 {
 
 /* ---------------- Подвал ---------------- */
 
-.section4 {
+footer {
   height: 960px;
   background-image: url(../images/game_1920.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-footer {
+.footer {
   height: 100%;
   background-color: rgb(10, 14, 52, 0.9);
 }
