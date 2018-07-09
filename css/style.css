@@ -34,7 +34,7 @@ header {
 }
 
 .caption {  
-  margin-top: 15%;
+  margin-top: 13%;
   display: flex;
   flex-direction: column; 
   align-items: flex-start;  
@@ -99,12 +99,27 @@ header {
 .gamers {
   height: 1760px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
 }
 
 .athlets, .players {
-  flex-basis: 50%;  
+  position: relative; /* позволяет позиционировать картинки от родителя */
+}
 
+.athlets_img {
+  position: absolute;
+  left: 18%;  
+  top: 3%; 
+}
+
+.players_img {
+  position: absolute;
+  left: 38%;  
+  top: 2%;
+}
+
+.athlets, .players {
+  flex-basis: 50%; 
 }
 
 .athlet_txt {
@@ -122,16 +137,17 @@ header {
   justify-content: center;
 }
 
-.athlet_3 {
+.athlet_txt_point {
+  display:  flex; 
+  flex-wrap:  wrap;   
+}
+
+.athlet_3, .player_3 {
   background-color: #f6f4fa;
 }
 
 .athlet_4 {
   background-color: #5e42b0;
-}
-
-.player_3 {
-  background-color: #ffffff;
 }
 
 .player_4 {
@@ -144,7 +160,11 @@ h2 {
   font-weight: 700;  
   letter-spacing: 5px;
   color: #c1c1c1;  
-  text-transform: uppercase;
+  text-transform: uppercase;  
+}
+
+.h2_1 {
+  padding-top: 60px;
 }
 
 h3 {
@@ -154,6 +174,37 @@ h3 {
   letter-spacing: 5px;
   color: #c1c1c1;  
   text-transform: uppercase;
+  padding-bottom: 25px;
+}
+
+.athlet_point {
+  width:  24px;  
+  height: 24px;
+  font-size: 18px; 
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 900; 
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-bottom-color: #8f7bc8;
+  margin: 2px 12px 0px 0px;
+}
+
+.white_brdr {  
+  border-bottom-color: white;
+}
+
+.point03 {
+  color: #9173e6;
+}
+
+.athlet_txt > p, .player_txt > p {
+  font-size: 20px; 
+  font-family: 'OpenSans', sans-serif;
+  width:  60%;
+}
+
+.player_txt > p {
+  width:  40%;
 }
 
 .athlet_txt:last-child > p, .player_txt:last-child > p {
@@ -165,6 +216,7 @@ h3 {
 .step {  
   display: flex;  
   font-size: 0; /* убирает пробелы между блоками */
+  position: relative; /* позволяет позиционировать блок step_point от родителя */
 }
 
 .step_img, .step_txt {  
@@ -197,6 +249,31 @@ h3 {
 .step_img > img {
   max-width: 100%;  
 } 
+
+.step_point {
+  height: 155px;
+  width: 170px;
+  background-color: #5e42b0;
+  color: white;
+  position: absolute;
+  left: calc(50% - 170px/2);  
+  top: calc(50% - 155px/2);  
+}
+
+.step_point > span {
+  height: 100%; 
+  color: white;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 24px;
+  font-weight: 900; 
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  border-bottom-style: solid;
+  border-bottom-width: 6px;
+  border-bottom-color: #8f7bc8; /*разобраться с бордером*/
+}
 
 
 
