@@ -3,9 +3,6 @@
   padding: 0px;
 }
 
-body {
-  
-}
 
 /* ---------------- Верхний блок ---------------- */
 
@@ -52,15 +49,6 @@ h1 {
   color: white;  
   text-transform: uppercase;
 }
-
-.caption > span:first-child {  
-  margin-right: 50%;
-}
-
-.caption > span:last-child {  
-  margin-left: 28%;
-}
-
 
 .apps {
   display: flex;
@@ -195,6 +183,7 @@ h3 {
   border-bottom-width: 5px;
   border-bottom-color: #8f7bc8;
   margin: 2px 12px 0px 0px;
+  line-height: 25px;
 }
 
 .white_brdr {  
@@ -207,12 +196,7 @@ h3 {
 
 .athlet_txt > p, .player_txt > p {
   font-size: 20px; 
-  font-family: 'OpenSans', sans-serif;
-  width:  60%;
-}
-
-.player_txt > p {
-  width:  40%;
+  font-family: 'OpenSans', sans-serif;  
 }
 
 .athlet_txt:last-child > p, .player_txt:last-child > p {
@@ -266,21 +250,23 @@ h3 {
   position: absolute;
   left: calc(50% - 170px/2);  
   top: calc(50% - 155px/2);  
-}
-
-.step_point > span {
-  height: 100%; 
-  color: white;
-  font-family: 'OpenSans', sans-serif;
-  font-size: 24px;
-  font-weight: 900; 
   display: flex;  
   flex-direction: column;
   justify-content: center;
   align-items: center;  
+}
+
+.step_point_txt {
+  height: 20%;
+  width: 18%;
+  color: white;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;   
   border-bottom-style: solid;
   border-bottom-width: 6px;
-  border-bottom-color: #8f7bc8; /*разобраться с бордером*/
+  border-bottom-color: #8f7bc8; 
+  line-height: 25px;
 }
 
 
@@ -308,8 +294,8 @@ footer {
 .down_app_icon {
   background-color: #6a4cc3;
   border-radius: 20px; 
-  width: 135px;
-  height: 140px; 
+  width: 130px;
+  height: 130px; 
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -327,4 +313,240 @@ footer {
   fill: white;
   width: 110px;
   height: 90px;  
+}
+
+
+/* surface_320.psd */
+
+@media (max-width: 640px) {
+
+  header, footer {
+    height: 570px;
+  }
+
+  .apps {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
+  }
+
+  .logo_icon_app { 
+    fill: white;
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    padding-left: 30%;
+  }
+
+  .app_button {
+    width: 280px;
+    height: 35px;      
+    justify-content: flex-start;  
+    margin-left: 6%;  
+    margin-bottom: 6%;  
+  }
+
+  .app_button > span {
+    font-size: 8px;
+  }
+
+
+  .athlets_img, .players_img {
+    /*width:  80%;
+    position: relative;
+    left: 0%;  
+    top: 0%;*/
+    display:  none;
+  }
+
+  .caption_txt {
+    font-size: 28px;    
+  }
+
+  .caption {
+    margin-bottom: 40%;
+    margin-top: 40%;
+  }
+
+  h2 {
+    font-size: 50px;    
+  }
+
+  .caption > span:last-child {  
+    margin-left: 15%;
+  }
+
+  .athlet_txt, .player_txt {
+    padding-left: 20px;
+  }
+
+  .athlet_txt > p, .player_txt > p {
+    font-size: 16px;
+  }
+
+  .athlet_point, .player_point {
+    font-size: 14px;
+    margin: -3px 4px 0px 0px;
+    width: 20px;
+  }
+
+  h3 {
+    font-size: 23px;
+  }
+
+  .step {  
+    flex-direction: column;
+  }
+
+  .step_2 {
+    flex-direction: column-reverse;
+  }
+
+  .step_point {
+    height: 70px;
+    width: 70px; 
+    left: calc(20% - 70px/2);  
+    top: calc(48% - 70px/2);   /*нужно сделать для 1ого квадрата отдельный отступ*/
+  }
+
+  .step_point_txt {
+    height: 20%;
+    width: 22%;
+    line-height: 15px;
+    font-size:  14px;
+  }
+  
+  .step_txt {
+    height: 210px;    
+  }
+
+  .step_txt > h2 {
+    font-size:  28px;
+    margin-bottom:  25px;
+  }
+
+  .step_txt > p {
+    font-size:  16px;
+  }
+
+  .down_app {
+    flex-direction: column;    
+    align-items: center;
+    padding-top: 15%; 
+  }
+
+  .down_app_icon {
+    margin-bottom: 10%;
+    margin-right: 0px; 
+    width: 70px;
+    height: 70px; 
+  }
+
+  .caption_txt_3 {
+    font-size: 28px;
+  }
+
+  .logo_icon_mini {
+    width: 50px;
+    height:  50px;
+  }
+
+  .down_app_txt > p {
+    font-size:  14px;
+  }
+}
+
+/* surface_768.psd */
+
+@media (min-width: 641px) and (max-width: 960px) {
+
+  /*поправить бекграунд*/
+
+  .athlets_img {
+  position: absolute;
+  left: -20%;  
+  top: 10%; 
+  }
+
+  .players_img {
+  position: absolute;
+  left: 40%;  
+  top: 1%;
+  }
+
+  h2 {
+    font-size: 64px;    
+  }
+    
+  .caption > span:first-child {  
+    
+  }
+
+  .caption > span:last-child {  
+    margin-left: 30%;
+  }
+
+  .caption {
+    margin-top: 20%;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  .athlet_txt > p, .player_txt > p {
+    font-size: 16px;
+  }
+  
+  .step {  
+    flex-direction: column;
+  }
+
+  .step_2 {
+    flex-direction: column-reverse;
+  }
+
+  .step_point {
+    height: 110px;
+    width: 110px; 
+    left: calc(10% - 110px/2);  
+    top: calc(66% - 110px/2);   /*нужно сделать для 1ого квадрата отдельный отступ*/
+  }
+
+  .step_point_txt {
+    height: 20%;
+    width: 22%;
+    line-height: 15px;
+  }
+  
+  .step_txt {
+    height: 340px;
+  }
+
+  .down_app {
+    flex-direction: column;    
+    align-items: center;
+    padding-top: 15%; 
+  }
+
+  .down_app_icon {
+    margin-bottom: 10%;
+    margin-right: 0px; 
+  }
+
+  .caption_txt_3 {
+    font-size: 80px;
+  }
+}
+
+@media (min-width: 961px) {
+
+/*  .caption > span:first-child {  
+    margin-right: 50%;
+  }
+
+  .caption > span:last-child {  
+    margin-left: 28%;
+  } */ 
 }
