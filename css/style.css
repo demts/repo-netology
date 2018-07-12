@@ -21,6 +21,10 @@ header {
   background-color: rgb(10, 14, 52, 0.9);  
 }
 
+h1 {
+  display: none;
+}
+
 .logo {  
   display: flex;    
   justify-content: center;    
@@ -37,7 +41,7 @@ header {
   margin-top: 13%;
   display: flex;
   flex-direction: column; 
-  align-items: flex-start;  
+  align-items: center; 
 }
 
 .caption_txt {
@@ -50,11 +54,11 @@ header {
 }
 
 .caption > span:first-child {  
-  margin-left: 8%;
+  margin-right: 50%;
 }
 
 .caption > span:last-child {  
-  margin-left: 32%;
+  margin-left: 28%;
 }
 
 
@@ -81,6 +85,10 @@ header {
   font-size: 14px; 
   color: white;
   text-transform: uppercase;
+}
+
+.app_button_b {
+  font-weight: 700;  
 }
 
 .app_button:first-child {
