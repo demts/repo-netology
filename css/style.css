@@ -4,42 +4,43 @@
 }
 
 
-/* ---------------- Верхний блок ---------------- */
+/* -------------------------------- Верхний блок -------------------------------- */
 
-header {
-  height: 960px;  
+header {  
   background-image: url(../images/football_1920.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.header {  
-  height: 100%;
+.header {    
   background-color: rgb(10, 14, 52, 0.9);  
 }
 
 h1 {
-  visibility: hidden;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important; 
+  width: 1px !important; 
+  overflow: hidden;
 }
 
 .logo {  
   display: flex;    
-  justify-content: center;    
+  justify-content: center;
+  padding-top: 40px;  
 }
 
 .logo_icon { 
   fill: white;
   width: 190px;
-  height: 50px;
-  margin-top: 0.5%;
-}
-
-.logo_icon_2 {
-  margin-top: 10%;
+  height: 55px;  
 }
 
 .caption {  
-  margin-top: 14%;
+  margin-top: 280px;
   display: flex;
   flex-direction: column; 
   align-items: center; 
@@ -48,25 +49,24 @@ h1 {
 .caption_txt {
   font-size: 90px; 
   font-family: 'OpenSans', sans-serif;
-  font-weight: 700;  
-  
+  font-weight: 700;   
   color: white;  
   text-transform: uppercase;
 }
 
 .caption_txt_1 {
-  padding-right: 45%;
+  padding-right: 850px;
 }
 
 .caption_txt_2 {
-  padding-left: 25%;
+  padding-left: 450px;
 }
 
 .apps {
-  display: flex;
-  flex-direction: row;
+  display: flex;  
   justify-content: center;
-  margin-top: 11%;
+  margin-top: 200px;
+  padding-bottom: 100px;
 }
 
 .app_button {
@@ -103,28 +103,45 @@ h1 {
   margin-right: 10px;
 }
 
-/* ---------------- Игроки ---------------- */
+/* -------------------------------- Игроки -------------------------------- */
 
-.gamers {
-  height: 1760px;
+.gamers {  
   display: flex;
   flex-direction: column;    
 }
 
-.athlets, .players {
-  position: relative; /* позволяет позиционировать картинки от родителя */
+.gamers, .players {
+  position: relative; 
 }
 
-.athlets_img {
+/*.athlets_img {
   position: absolute;
-  left: 20%;  
-  top: 3%; 
+  left: 200px;  
+  top: 30px; 
+}*/
+
+.gamers:before { 
+  content:""; 
+  position: absolute;  
+  bottom: 10px;
+  right: 10px; 
+  left: 400px;  
+  top: 60px; 
+  background:url(../images/footballer_566.png); 
+  background-repeat: no-repeat;
+  z-index: 10;
 }
 
-.players_img {
-  position: absolute;
-  left: 42%;  
-  top: 2%;
+.players:before {
+  content:""; 
+  position: absolute;  
+  bottom: 10px;
+  right: 10px; 
+  left: 800px;  
+  top: 60px; 
+  background:url(../images/basketballer_991.png); 
+  background-repeat: no-repeat;
+  z-index: 10;
 }
 
 .athlets, .players {
@@ -136,19 +153,16 @@ h1 {
 }
 
 .player_txt {
-  padding-left: 10%;
+  padding-left: 10%;  
 }
 
-.athlet_txt, .player_txt {
-  height: 25%;    
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.athlet_txt, .player_txt {      
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .athlet_txt_point {
-  display:  flex; 
-  flex-wrap:  wrap;   
+  display:  flex;   
 }
 
 .athlet_3, .player_3 {
@@ -166,28 +180,25 @@ h1 {
 h2 {
   font-size: 80px; 
   font-family: 'OpenSans', sans-serif;
-  font-weight: 700;  
-  
+  font-weight: 700;    
   color: #c1c1c1;  
   text-transform: uppercase;  
 }
 
 .h2_1 {
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 h3 {
   font-size: 36px; 
-  font-family: 'OpenSans', sans-serif;
-  font-weight: 700;  
+  font-family: 'OpenSans', sans-serif;  
   letter-spacing: 5px;
   color: #c1c1c1;  
   text-transform: uppercase;
-  padding-bottom: 25px;
+  padding-bottom: 25px;  
 }
 
-.athlet_point {
-  width:  24px;  
+.athlet_point {  
   height: 24px;
   font-size: 18px; 
   font-family: 'OpenSans', sans-serif;
@@ -210,59 +221,55 @@ h3 {
 .athlet_txt > p, .player_txt > p {
   font-size: 20px; 
   font-family: 'OpenSans', sans-serif;  
+  max-width: 750px;
+  line-height: 25px;
 }
 
 .athlet_txt:last-child > p, .player_txt:last-child > p {
   color: white;  
 }
 
-/* ---------------- Шаги ---------------- */
-
-.steps {
-  display: flex;
-  align-content: center;
-  align-items: center;
-}
+/* -------------------------------- Шаги -------------------------------- */
 
 .step {  
   display: flex;  
   font-size: 0; /* убирает пробелы между блоками */
-  position: relative; /* позволяет позиционировать блок step_point от родителя */
-
 }
 
-.step_img, .step_txt {  
-  flex-wrap: wrap;
+.step_img, .step_txt {    
   flex-basis: 50%;  
+}
+
+.step_img > img {
+  max-width: 100%;  
 }
 
 .step_txt {
   display: flex; 
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; 
+  box-sizing: border-box; 
+}
+
+.step_point_pos {
+  position: relative; /* позволяет позиционировать блок step_point от родителя */
 }
 
 .step_txt:nth-child(even) {
-  padding-left: 8%;
-  padding-right: 8%;
-  box-sizing: border-box;
+  padding-left: 130px;
+  max-width: 640px;  
 }
 
 .step_txt:nth-child(odd) {
-  padding-left: 6%;
-  padding-right: 6%;
-  box-sizing: border-box;
+  padding-left: 180px;    
 }
 
 
 .step_txt > p {
+  padding-top: 130px;
   font-size: 24px; 
   font-family: 'OpenSans', sans-serif;     
 }
-
-.step_img > img {
-  max-width: 100%;  
-} 
 
 .step_point {
   height: 155px;
@@ -270,47 +277,46 @@ h3 {
   background-color: #5e42b0;
   color: white;
   position: absolute;
-  left: calc(50% - 170px/2);  
-  top: calc(50% - 155px/2);  
+  left: calc(-215px);
+  top: calc(-155px / 4);
   display: flex;  
   flex-direction: column;
   justify-content: center;
   align-items: center;  
 }
 
-.step_point_txt {
-  height: 20%;
-  width: 16%;
+.step_point_2 {
+  left: calc(690px);
+}
+
+.step_point_txt {  
   color: white;
   font-family: 'OpenSans', sans-serif;
   font-size: 24px;
   font-weight: 700;   
   border-bottom-style: solid;
   border-bottom-width: 6px;
-  border-bottom-color: #8f7bc8; 
-  line-height: 25px;
+  border-bottom-color: #8f7bc8;   
 }
 
 
 
-/* ---------------- Подвал ---------------- */
+/* -------------------------------- Подвал -------------------------------- */
 
-footer {
-  height: 960px;
+footer {  
   background-image: url(../images/game_1920.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.footer {
-  height: 100%;
+.footer {  
   background-color: rgb(10, 14, 52, 0.9);
 }
 
 .down_app {
   display: flex;
   justify-content: center;
-  padding-top: 10%;
+  padding-top: 255px;
 }
 
 .down_app_icon {
@@ -337,20 +343,24 @@ footer {
   height: 90px;  
 }
 
+.logo_icon_2 {
+  padding-top: 160px;
+  padding-bottom: 50px;
+}
 
-/* surface_320.psd */
+
+/* -------------------------------- surface_320.psd -------------------------------- */
 
 @media (max-width: 640px) {
 
-  header, footer {
-    height: 570px;
+  .apps {       
+    flex-direction: column;
+    align-items: center;        
   }
 
-  .apps {    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 10%;
+  .footer > .apps {
+    padding-bottom: 0;
+    margin-top: 80px;
   }
 
   .logo_icon_app { 
@@ -362,24 +372,45 @@ footer {
   }
 
   .app_button {
-    width: auto;
+    max-width: 280px;    
     height: 35px;      
     justify-content: flex-start;  
-    margin-left: 6%;  
-    margin-bottom: 6%;  
+    margin: 0;
+    margin-bottom: 3%;  
+    
+  }
+
+  .app_button:first-child {
+  margin-right: 0px;
   }
 
   .app_button > span {
     font-size: 8px;
   }
 
+  .gamers:before { 
+    content:""; 
+    position: absolute;  
+    bottom: 10px;
+    right: 10px; 
+    left: 80px;  
+    top: 120px; 
+    background:url(../images/footballer_192.png); 
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
 
-  .athlets_img, .players_img {
-    /*width:  80%;
-    position: relative;
-    left: 0%;  
-    top: 0%;*/
-    display:  none;
+  .players:before {
+    content:""; 
+    position: absolute;  
+    bottom: 10px;
+    right: 10px; 
+    left: 10px;  
+    top: 120px; 
+    background:url(../images/basketballer_302.png); 
+    background-repeat: no-repeat;
+    z-index: 10;
+    /*overflow: visible;*/
   }
 
   .caption_txt {
@@ -387,29 +418,45 @@ footer {
   }
 
   .caption_txt_1 {
-    padding-right: 20%;
+    padding-right: 20px;
   }
 
   .caption_txt_2 {
-    padding-left: 15%;
-    padding-top: 5%;
+    padding-left: 65px;
+    padding-top: 30px;
   }
 
   .caption {
-    margin-bottom: 40%;
-    margin-top: 40%;
+    margin-bottom: 90px;
+    margin-top: 135px;
   }
 
   h2 {
     font-size: 50px;    
   }
 
+  .h2_1 {
+    padding-bottom: 330px;
+  }
+
   .athlet_txt, .player_txt {
     padding-left: 20px;
+    padding-top: 55px;
+  }
+
+  .athlet_2, .player_2 {
+  background-color: #fafafa;
+  }
+
+  .athlet_txt:first-child, .player_txt:first-child {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: -60px;
   }
 
   .athlet_txt > p, .player_txt > p {
     font-size: 16px;
+    max-width: 270px;
   }
 
   .athlet_point, .player_point {
@@ -430,11 +477,20 @@ footer {
     flex-direction: column-reverse;
   }
 
+  .step_txt:nth-child(even), .step_txt:nth-child(odd) {
+    height: 210px;
+    padding-left: 20px;
+  }
+
   .step_point {
     height: 70px;
     width: 70px; 
-    left: calc(20% - 70px/2);  
-    top: calc(48% - 70px/2);   /*нужно сделать для 1ого квадрата отдельный отступ*/
+    left: calc(35px - 70px/2);  
+    top: calc(-65px - 70px/2);   
+  }
+
+  .step_point_pos > h2 {
+    font-size:  28px;
   }
 
   .step_point_txt {
@@ -455,6 +511,7 @@ footer {
 
   .step_txt > p {
     font-size:  16px;
+    padding-top: 30px;
   }
 
   .down_app {
@@ -482,45 +539,85 @@ footer {
   .down_app_txt_2 {
     font-size:  14px;
   }
+
+  .logo_icon_2 {
+    padding-top: 80px;
+    padding-bottom: 10px;
+  }
+
+  .logo_icon {
+    width: 135px;
+    height: 40px;
+  }
+
 }
 
-/* surface_768.psd */
+/* -------------------------------- surface_768.psd -------------------------------- */
 
 @media (min-width: 641px) and (max-width: 960px) {
 
   /*поправить бекграунд*/
 
-  .athlets_img {
-  position: absolute;
-  left: -20%;  
-  top: 10%; 
+  .gamers:before { 
+    content:""; 
+    position: absolute;  
+    bottom: 10px;
+    right: 10px; 
+    left: -150px;  
+    top: 120px; 
+    background:url(../images/footballer_497.png); 
+    background-repeat: no-repeat;
+    z-index: 10;
   }
 
-  .players_img {
-  position: absolute;
-  left: 40%;  
-  top: 1%;
+  .players:before {
+    content:""; 
+    position: absolute;  
+    bottom: 10px;
+    right: 10px; 
+    left: 335px;  
+    top: 30px; 
+    background:url(../images/basketballer_436.png); 
+    background-repeat: no-repeat;
+    z-index: 10;
+    /*overflow: visible;*/
+  }
+
+  .caption {
+    margin-top: 180px;
+    align-items: flex-start;
   }
 
   h2 {
     font-size: 64px;    
   }
+
+  .caption_txt {
+    font-size: 64px;
+  }
     
   .caption_txt_1 {
-    padding-right: 15%;
+    padding-left: 80px; 
+    padding-right: 0;   
   }
 
   .caption_txt_2 {
-    padding-left: 25%;
+    padding-left: 180px;    
   }
   
   .apps {
-    margin-top: 20%
+    margin-top: 310px;
+    margin-bottom: 0;
+    
   }
 
-  .caption {
-    margin-top: 20%;
+  .athlet_txt, .player_txt {
+    padding-bottom: 0;
   }
+
+  .athlet_txt {
+    padding-left: 40%;
+  }  
 
   h3 {
     font-size: 32px;
@@ -528,6 +625,8 @@ footer {
 
   .athlet_txt > p, .player_txt > p {
     font-size: 16px;
+    padding-bottom: 40px;
+    max-width: 430px;
   }
   
   .step {  
@@ -538,11 +637,11 @@ footer {
     flex-direction: column-reverse;
   }
 
-  .step_point {
+  .step_point, .step_point_2 {
     height: 110px;
     width: 110px; 
-    left: calc(10% - 110px/2);  
-    top: calc(66% - 110px/2);   /*нужно сделать для 1ого квадрата отдельный отступ*/
+    left: calc(55px - 110px/2);  
+    top: calc(-110px - 110px/2);   /*нужно сделать для 1ого квадрата отдельный отступ*/
   }
 
   .step_point_txt {
@@ -551,24 +650,34 @@ footer {
     line-height: 15px;
   }
   
-  .step_txt {
+  .step_txt:nth-child(even), .step_txt:nth-child(odd) {
     height: 340px;
+    padding-left: 30px;
+  }
+
+  .step_txt > p {
+    padding-top: 40px;
   }
 
   .down_app {
     flex-direction: column;    
     align-items: center;
-    padding-top: 15%; 
+    padding-top: 120px;    
   }
 
-  .down_app_icon {
-    margin-bottom: 10%;
+  .down_app_icon {    
     margin-right: 0px; 
+    margin-bottom: 80px;
   }
 
   .caption_txt_3 {
     font-size: 80px;
   }
+
+  .logo_icon_2 {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
 }
 
 @media (min-width: 961px) {
