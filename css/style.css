@@ -46,6 +46,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   max-width: 1560px;
+  letter-spacing: 1px;
 }
 
 .caption_txt {
@@ -361,6 +362,14 @@ footer {
 
 @media (max-width: 640px) {
 
+  header {  
+    background-image: url(../images/football_767.jpg);
+  }
+
+  footer {  
+    background-image: url(../images/game_767.jpg);
+  }
+
   .apps {       
     flex-direction: column;
     align-items: center; 
@@ -566,7 +575,13 @@ footer {
 
 @media (min-width: 641px) and (max-width: 960px) {
 
-  /*поправить бекграунд*/
+  header {  
+    background-image: url(../images/football_767.jpg);
+  }
+
+  footer {  
+    background-image: url(../images/game_767.jpg);
+  }
 
   .gamers:before { 
     content:""; 
@@ -585,7 +600,7 @@ footer {
     position: absolute;  
     bottom: 10px;
     right: 10px; 
-    left: 335px;  
+    left: 50%;  
     top: 30px; 
     background:url(../images/basketballer_436.png); 
     background-repeat: no-repeat;
@@ -689,4 +704,60 @@ footer {
     padding-bottom: 50px;
 }
 }
+
+/* -------------------------------- промежуточное -------------------------------- */
+
+@media (min-width: 961px) and (max-width: 1919px) {
+
+  header {  
+    background-image: url(../images/football_1280.jpg);
+  }
+
+  footer {  
+    background-image: url(../images/game_1280.jpg);
+  }
+
+  .gamers:before { 
+    content:""; 
+    position: absolute;  
+    bottom: 10px;
+    right: 10px; 
+    left: 100px;  
+    top: 120px; 
+    background:url(../images/footballer_497.png); 
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
+
+  .players:before {
+    content:""; 
+    position: absolute;  
+    bottom: 10px;
+    right: 10px; 
+    left: 50%;  
+    top: 30px; 
+    background:url(../images/basketballer_991.png); 
+    background-repeat: no-repeat;
+    z-index: 10;
+    overflow: visible;
+  }
+
+  .step_txt:nth-child(odd), .step_txt:nth-child(even) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .step_point {
+    left: -80px;
+  }
+
+  .step_point_2 {
+    right: -80px;
+    left: auto;
+  }
+
+  .step_point {
+    height: 100px;
+    width: 100px;
+  }
 
