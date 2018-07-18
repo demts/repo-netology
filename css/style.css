@@ -41,9 +41,11 @@ h1 {
 
 .caption {  
   margin-top: 280px;
-  display: flex;
+  display: flex;  
   flex-direction: column; 
-  align-items: center; 
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1560px;
 }
 
 .caption_txt {
@@ -52,14 +54,12 @@ h1 {
   font-weight: 700;   
   color: white;  
   text-transform: uppercase;
-}
-
-.caption_txt_1 {
-  padding-right: 850px;
+  padding-left: 20px;
 }
 
 .caption_txt_2 {
-  padding-left: 450px;
+  padding-left: 430px;
+  padding-right: 20px;
 }
 
 .apps {
@@ -107,7 +107,7 @@ h1 {
 
 .gamers {  
   display: flex;
-  flex-direction: column;    
+  flex-direction: column;  
 }
 
 .gamers, .players {
@@ -231,9 +231,15 @@ h3 {
 
 /* -------------------------------- Шаги -------------------------------- */
 
+.steps {
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .step {  
   display: flex;  
-  font-size: 0; /* убирает пробелы между блоками */
+  font-size: 0; /* убирает пробелы между блоками */  
 }
 
 .step_img, .step_txt {    
@@ -257,11 +263,12 @@ h3 {
 
 .step_txt:nth-child(even) {
   padding-left: 130px;
-  max-width: 640px;  
+  padding-right: 130px;   
 }
 
 .step_txt:nth-child(odd) {
-  padding-left: 180px;    
+  padding-left: 180px;
+  padding-right: 180px;    
 }
 
 
@@ -277,8 +284,8 @@ h3 {
   background-color: #5e42b0;
   color: white;
   position: absolute;
-  left: calc(-215px);
-  top: calc(-155px / 4);
+  left: -215px;
+  top: -35px;
   display: flex;  
   flex-direction: column;
   justify-content: center;
@@ -286,7 +293,8 @@ h3 {
 }
 
 .step_point_2 {
-  left: calc(690px);
+  left: auto;
+  right: -265px;
 }
 
 .step_point_txt {  
@@ -355,7 +363,8 @@ footer {
 
   .apps {       
     flex-direction: column;
-    align-items: center;        
+    align-items: center; 
+    margin-top: 100px;     
   }
 
   .footer > .apps {
@@ -445,7 +454,7 @@ footer {
   }
 
   .athlet_2, .player_2 {
-  background-color: #fafafa;
+    background-color: #fafafa;
   }
 
   .athlet_txt:first-child, .player_txt:first-child {
@@ -480,6 +489,7 @@ footer {
   .step_txt:nth-child(even), .step_txt:nth-child(odd) {
     height: 210px;
     padding-left: 20px;
+    padding-right: 20px;
   }
 
   .step_point {
@@ -584,8 +594,7 @@ footer {
   }
 
   .caption {
-    margin-top: 180px;
-    align-items: flex-start;
+    margin-top: 180px;    
   }
 
   h2 {
@@ -598,11 +607,12 @@ footer {
     
   .caption_txt_1 {
     padding-left: 80px; 
-    padding-right: 0;   
+    padding-right: 20px;   
   }
 
   .caption_txt_2 {
-    padding-left: 180px;    
+    padding-left: 180px;
+    padding-right: 20px;     
   }
   
   .apps {
@@ -641,7 +651,7 @@ footer {
     height: 110px;
     width: 110px; 
     left: calc(55px - 110px/2);  
-    top: calc(-110px - 110px/2);   /*нужно сделать для 1ого квадрата отдельный отступ*/
+    top: calc(-110px - 110px/2);   
   }
 
   .step_point_txt {
@@ -675,18 +685,8 @@ footer {
   }
 
   .logo_icon_2 {
-  padding-top: 30px;
-  padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
 }
 
-@media (min-width: 961px) {
-
-/*  .caption > span:first-child {  
-    margin-right: 50%;
-  }
-
-  .caption > span:last-child {  
-    margin-left: 28%;
-  } */ 
-}
