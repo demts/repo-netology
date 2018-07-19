@@ -3,6 +3,20 @@
   padding: 0px;
 }
 
+@font-face {
+    font-family: OpenSans-Bold; 
+    src: url(../fonts/OpenSans-Bold.ttf) format("truetype"),
+    url("../fonts/OpenSans-Bold.woff") format("woff"),
+    url("../fonts/OpenSans-Bold.woff2") format("woff2");    
+  }
+
+@font-face {
+    font-family: OpenSans-Regular; 
+    src: url(../fonts/OpenSans-Regular.ttf) format("truetype"),
+    url("../fonts/OpenSans-Regular.woff") format("woff"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  }
+
 
 /* -------------------------------- Верхний блок -------------------------------- */
 
@@ -40,33 +54,33 @@ h1 {
 }
 
 .caption {  
-  margin-top: 280px;
-  display: flex;  
-  flex-direction: column; 
+  margin-top: 280px;     
   margin-left: auto;
   margin-right: auto;
-  max-width: 1560px;
-  letter-spacing: 1px;
+  max-width: 1560px;  
 }
 
 .caption_txt {
+  display: block; 
   font-size: 90px; 
-  font-family: 'OpenSans', sans-serif;
+  font-family: 'OpenSans-Bold', sans-serif;
   font-weight: 700;   
   color: white;  
   text-transform: uppercase;
-  padding-left: 20px;
+  padding-left: 15px;
+  letter-spacing: 4px;
+  line-height: 1;
 }
 
 .caption_txt_2 {
-  padding-left: 430px;
-  padding-right: 20px;
+  padding-left: 460px;  
+  padding-right: 15px;  
 }
 
 .apps {
   display: flex;  
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 220px;
   padding-bottom: 100px;
 }
 
@@ -82,7 +96,7 @@ h1 {
 }
 
 .app_button > span {
-  font-family: 'OpenSans', sans-serif;
+  font-family: 'OpenSans-Regular', sans-serif;
   font-size: 14px; 
   color: white;
   text-transform: uppercase;
@@ -90,7 +104,9 @@ h1 {
 }
 
 .app_button_b {
-  font-weight: 700;  
+  font-family: 'OpenSans-Bold', sans-serif;
+  font-weight: 700; 
+  display: block; 
 }
 
 .app_button:first-child {
@@ -108,18 +124,12 @@ h1 {
 
 .gamers {  
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;    
 }
 
 .gamers, .players {
   position: relative; 
 }
-
-/*.athlets_img {
-  position: absolute;
-  left: 200px;  
-  top: 30px; 
-}*/
 
 .gamers:before { 
   content:""; 
@@ -127,7 +137,7 @@ h1 {
   bottom: 10px;
   right: 10px; 
   left: 400px;  
-  top: 60px; 
+  top: 30px; 
   background:url(../images/footballer_566.png); 
   background-repeat: no-repeat;
   z-index: 10;
@@ -139,7 +149,7 @@ h1 {
   bottom: 10px;
   right: 10px; 
   left: 800px;  
-  top: 60px; 
+  top: 30px; 
   background:url(../images/basketballer_991.png); 
   background-repeat: no-repeat;
   z-index: 10;
@@ -149,66 +159,79 @@ h1 {
   flex-basis: 50%; 
 }
 
-.athlet_txt {
-  padding-left: 52%;
+.athlet_txt {  
+  max-width: 1560px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 53%;  
+  padding-right: 30px;
+   
 }
 
 .player_txt {
-  padding-left: 10%;  
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1560px; 
+  padding-left: 60px; 
+  padding-right: 30px; 
 }
 
 .athlet_txt, .player_txt {      
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 45px;
+  padding-bottom: 45px;  
+}
+
+.athlet_txt_1 {      
+  padding-top: 30px;
 }
 
 .athlet_txt_point {
   display:  flex;   
 }
 
-.athlet_3, .player_3 {
+.athlet_3_bg, .player_3_bg {
   background-color: #f6f4fa;
 }
 
-.athlet_4 {
+.athlet_4_bg {
   background-color: #5e42b0;
 }
 
-.player_4 {
+.player_4_bg {
   background-color: #0a0e34;
 }
 
 h2 {
   font-size: 80px; 
-  font-family: 'OpenSans', sans-serif;
+  font-family: 'OpenSans-Bold', sans-serif;
   font-weight: 700;    
-  color: #c1c1c1;  
-  text-transform: uppercase;  
+  color: #e7e7e7;  
+  text-transform: uppercase; 
 }
 
 .h2_1 {
-  padding-top: 30px;
+  padding-top: 45px;
 }
 
 h3 {
   font-size: 36px; 
-  font-family: 'OpenSans', sans-serif;  
-  letter-spacing: 5px;
+  font-family: 'OpenSans-Bold', sans-serif;  
+  letter-spacing: 2px;
   color: #c1c1c1;  
   text-transform: uppercase;
-  padding-bottom: 25px;  
+  padding-bottom: 20px;  
 }
 
 .athlet_point {  
-  height: 24px;
+  height: 15px;
   font-size: 18px; 
-  font-family: 'OpenSans', sans-serif;
+  font-family: 'OpenSans-Bold', sans-serif;
   font-weight: 900; 
   border-bottom-style: solid;
   border-bottom-width: 5px;
   border-bottom-color: #8f7bc8;
-  margin: 2px 12px 0px 0px;
-  line-height: 25px;
+  margin: 18px 12px 0px 0px;
+  line-height: 5px;
 }
 
 .white_brdr {  
@@ -219,14 +242,15 @@ h3 {
   color: #9173e6;
 }
 
-.athlet_txt > p, .player_txt > p {
+.athlet_txt_p, .player_txt_p {
   font-size: 20px; 
-  font-family: 'OpenSans', sans-serif;  
-  max-width: 750px;
-  line-height: 25px;
+  font-family: 'OpenSans-Regular', sans-serif;  
+  max-width: 720px;
+  line-height: 30px;  
+  letter-spacing: 1px;
 }
 
-.athlet_txt:last-child > p, .player_txt:last-child > p {
+.athlet_txt_p_3, .player_txt_p_3 {
   color: white;  
 }
 
@@ -269,14 +293,20 @@ h3 {
 
 .step_txt:nth-child(odd) {
   padding-left: 180px;
-  padding-right: 180px;    
+  padding-right: 150px;    
 }
 
 
-.step_txt > p {
-  padding-top: 130px;
+.step_txt > p {  
   font-size: 24px; 
-  font-family: 'OpenSans', sans-serif;     
+  font-family: 'OpenSans-Regular', sans-serif; 
+  line-height: 30px;  
+  letter-spacing: 1px;
+  max-width: 640px;    
+}
+
+.step_point_pos > h2 {
+  padding-bottom: 60px;
 }
 
 .step_point {
@@ -285,8 +315,8 @@ h3 {
   background-color: #5e42b0;
   color: white;
   position: absolute;
-  left: -215px;
-  top: -35px;
+  left: -210px;
+  top: -30px;
   display: flex;  
   flex-direction: column;
   justify-content: center;
@@ -295,12 +325,12 @@ h3 {
 
 .step_point_2 {
   left: auto;
-  right: -265px;
+  right: -230px;
 }
 
 .step_point_txt {  
   color: white;
-  font-family: 'OpenSans', sans-serif;
+  font-family: 'OpenSans-Bold', sans-serif;
   font-size: 24px;
   font-weight: 700;   
   border-bottom-style: solid;
@@ -325,25 +355,27 @@ footer {
 .down_app {
   display: flex;
   justify-content: center;
-  padding-top: 255px;
+  padding-top: 270px;
 }
 
 .down_app_icon {
   background-color: #6a4cc3;
-  border-radius: 20px; 
+  border-radius: 30px; 
   width: 130px;
   height: 130px; 
   display: flex;
   justify-content: center;
   align-items: center; 
-  margin-right: 10px; 
+  margin-right: 20px; 
 }
 
 .down_app_txt_2 {
-  font-family: 'OpenSans', sans-serif;
+  display: block;
+  font-family: 'OpenSans-Regular', sans-serif;
   font-size: 30px;
   color: #a496ca;
   text-transform: uppercase;  
+  padding-left: 25px;
 }
 
 .logo_icon_mini { 
@@ -354,7 +386,17 @@ footer {
 
 .logo_icon_2 {
   padding-top: 160px;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
+}
+
+.caption_txt_3 {
+  font-size: 80px;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+.footer > .apps {
+  margin-top: 130px;
 }
 
 
@@ -373,7 +415,8 @@ footer {
   .apps {       
     flex-direction: column;
     align-items: center; 
-    margin-top: 100px;     
+    margin-top: 100px; 
+    padding-bottom: 50px;    
   }
 
   .footer > .apps {
@@ -394,8 +437,7 @@ footer {
     height: 35px;      
     justify-content: flex-start;  
     margin: 0;
-    margin-bottom: 3%;  
-    
+    margin-bottom: 3%;    
   }
 
   .app_button:first-child {
@@ -411,7 +453,7 @@ footer {
     position: absolute;  
     bottom: 10px;
     right: 10px; 
-    left: 80px;  
+    left: 65px;  
     top: 120px; 
     background:url(../images/footballer_192.png); 
     background-repeat: no-repeat;
@@ -428,19 +470,20 @@ footer {
     background:url(../images/basketballer_302.png); 
     background-repeat: no-repeat;
     z-index: 10;
-    /*overflow: visible;*/
   }
 
   .caption_txt {
-    font-size: 28px;    
+    font-size: 28px; 
+    letter-spacing: 2px;  
   }
 
   .caption_txt_1 {
-    padding-right: 20px;
+    padding-right: 10px;
+    padding-left: 30px;
   }
 
   .caption_txt_2 {
-    padding-left: 65px;
+    padding-left: 75px;
     padding-top: 30px;
   }
 
@@ -455,6 +498,7 @@ footer {
 
   .h2_1 {
     padding-bottom: 330px;
+    padding-top: 0;
   }
 
   .athlet_txt, .player_txt {
@@ -462,25 +506,24 @@ footer {
     padding-top: 55px;
   }
 
-  .athlet_2, .player_2 {
+  .athlet_2_bg, .player_2_bg {
     background-color: #fafafa;
   }
 
   .athlet_txt:first-child, .player_txt:first-child {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin-bottom: -60px;
+    padding-top: 20px;
+    padding-bottom: 20px;    
   }
 
-  .athlet_txt > p, .player_txt > p {
+  .athlet_txt_p, .player_txt_p {
     font-size: 16px;
     max-width: 270px;
   }
 
   .athlet_point, .player_point {
     font-size: 14px;
-    margin: -3px 4px 0px 0px;
-    width: 20px;
+    margin: 10px 8px 0px 0px;
+    width: 16px;
   }
 
   h3 {
@@ -505,18 +548,21 @@ footer {
     height: 70px;
     width: 70px; 
     left: calc(35px - 70px/2);  
-    top: calc(-65px - 70px/2);   
+    top: calc(-30px - 70px/2);   
   }
 
   .step_point_pos > h2 {
     font-size:  28px;
+    padding-bottom: 0;
+    padding-top: 10px;
   }
 
   .step_point_txt {
     height: 20%;
     width: 22%;
-    line-height: 15px;
+    line-height: 10px;
     font-size:  14px;
+    border-bottom-width: 3px;
   }
   
   .step_txt {
@@ -536,14 +582,15 @@ footer {
   .down_app {
     flex-direction: column;    
     align-items: center;
-    padding-top: 15%; 
+    padding-top: 25%; 
   }
 
   .down_app_icon {
-    margin-bottom: 10%;
+    margin-bottom: 15%;
     margin-right: 0px; 
     width: 70px;
     height: 70px; 
+    border-radius: 20px;
   }
 
   .caption_txt_3 {
@@ -567,6 +614,10 @@ footer {
   .logo_icon {
     width: 135px;
     height: 40px;
+  }
+
+  .footer > .logo {
+    padding-top: 0;
   }
 
 }
@@ -600,12 +651,11 @@ footer {
     position: absolute;  
     bottom: 10px;
     right: 10px; 
-    left: 50%;  
-    top: 30px; 
+    left: 42%;  
+    top: 60px; 
     background:url(../images/basketballer_436.png); 
     background-repeat: no-repeat;
     z-index: 10;
-    /*overflow: visible;*/
   }
 
   .caption {
@@ -613,7 +663,11 @@ footer {
   }
 
   h2 {
-    font-size: 64px;    
+    font-size: 80px;    
+  }
+
+  .step_point_pos > h2 {
+    padding-bottom: 0px;
   }
 
   .caption_txt {
@@ -630,10 +684,10 @@ footer {
     padding-right: 20px;     
   }
   
-  .apps {
+  .footer > .apps {
     margin-top: 310px;
-    margin-bottom: 0;
-    
+    margin-bottom: 0px;
+    padding-bottom: 0px;
   }
 
   .athlet_txt, .player_txt {
@@ -666,7 +720,7 @@ footer {
     height: 110px;
     width: 110px; 
     left: calc(55px - 110px/2);  
-    top: calc(-110px - 110px/2);   
+    top: calc(-80px - 110px/2);   
   }
 
   .step_point_txt {
@@ -678,10 +732,11 @@ footer {
   .step_txt:nth-child(even), .step_txt:nth-child(odd) {
     height: 340px;
     padding-left: 30px;
+    padding-right: 30px;
   }
 
   .step_txt > p {
-    padding-top: 40px;
+    padding-top: 20px;
   }
 
   .down_app {
@@ -702,7 +757,16 @@ footer {
   .logo_icon_2 {
     padding-top: 30px;
     padding-bottom: 50px;
-}
+  }
+
+  .down_app_txt_2 {
+    padding-right:  10px;
+    padding-left: 100px;
+  }
+
+  .footer > .logo {
+    padding-top: 0px;
+  }
 }
 
 /* -------------------------------- промежуточное -------------------------------- */
