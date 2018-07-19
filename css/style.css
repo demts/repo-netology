@@ -375,7 +375,7 @@ footer {
   font-size: 30px;
   color: #a496ca;
   text-transform: uppercase;  
-  padding-left: 25px;
+  padding-left: 15px;
 }
 
 .logo_icon_mini { 
@@ -725,7 +725,7 @@ footer {
 
   .step_point_txt {
     height: 20%;
-    width: 20%;
+    width: 24%;
     line-height: 15px;
   }
   
@@ -779,6 +779,14 @@ footer {
 
   footer {  
     background-image: url(../images/game_1280.jpg);
+  }
+
+  .caption_txt_1 {
+    padding-left: 15%;
+  }
+
+  .caption_txt_2 {
+    padding-left: 30%;
   }
 
   .gamers:before { 
